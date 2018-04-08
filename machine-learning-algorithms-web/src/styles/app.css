@@ -1,0 +1,117 @@
+.banner {
+  background-color: #515A5A;
+  color: white;
+  padding: 2rem 2em 2em 2em;
+  position: static;
+  top: 10px;
+}
+
+.center-block {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card-catalog {
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.card {
+  flex-basis: 32%;
+  position: relative;
+  margin: 10px 0;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.2);
+  transition: all .3s;
+  color: #515A5A;
+}
+
+.card:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.2), 0 6px 18px rgba(0, 0, 0, 0.2);
+  transform: translate3d(0, -2px, 0)
+}
+
+.card:nth-child(3n-1) {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+@media all and (max-width: 1050px) {
+  .card {
+    flex-basis: 46%;
+  }
+  .card:nth-child(3n-1) {
+    margin: 10px 0;
+  }
+  .card:nth-child(2n-1) {
+    margin: 10px 2%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .card {
+    flex-basis: 100%;
+  }
+  .card:nth-child(3n-1) {
+    margin: 10px 0;
+  }
+  .card:nth-child(2n-1) {
+    margin: 10px 0;
+  }
+}
+
+.card .card-content {
+  border-radius: 0 0 2px 2px;
+}
+
+.card .card-title {
+  font-size: 17px;
+  font-weight: 600;
+  width: 100%;
+  background-color: #717D7E;
+  color: #fff;
+  display: block;
+  padding: 4px 10px;
+  border-radius: 2px 2px 0 0;
+}
+
+.card .card-body {
+  padding: 10px;
+  flex-flow: row wrap;
+}
+
+.tags {
+  display: flex;
+  flex-flow: row wrap;
+  .btn {
+    font-weight: 300;
+  }
+}
+
+.tag {
+  margin-right: 5px;
+}
+
+.center {
+  margin: auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.markdown {
+  h1:before, h2:before, h3:before, h4:before {
+    display: block;
+    content: " ";
+    margin-top: -130px;
+    height: 130px;
+    visibility: hidden;
+  }
+
+  img {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+  }
+}

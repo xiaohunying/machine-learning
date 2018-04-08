@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: machine-learning-algorithms
+
+---
+spring:
+  profiles: default
+
+machine-learning-algorithms:
+  test: hello
+
+  url-template: 'https://github.com/wuliping/algorithms/raw/develop/%1$s-%2$s.jar'
+
+  algorithms:
+    linear-regression:
+      id: algorithm-linear-regression
+      develop-version: 0.0.1-SNAPSHOT
+      publish-version: 0.0.1-SNAPSHOT
+    logistic-regression:
+      id: algorithm-logistic-regression
+      develop-version: 0.0.1-SNAPSHOT
+      publish-version: 0.0.1-SNAPSHOT
+    hyperparameter-tuning:
+      id: algorithm-hyperparameter-tuning
+      publish-version: 0.0.1-SNAPSHOT
+      develop-version: 0.0.1-SNAPSHOT
+    dropout-regularization:
+      id: algorithm-dropout-regularization
+      publish-version: 0.0.1-SNAPSHOT
+      develop-version: 0.0.1-SNAPSHOT
+    exponentially-weighted-averages:
+      id: algorithm-exponentially-weighted-averages
+      publish-version: 0.0.1-SNAPSHOT
+      develop-version: 0.0.1-SNAPSHOT

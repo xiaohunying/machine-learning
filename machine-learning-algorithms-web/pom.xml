@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>machine-learning-algorithms-web</artifactId>
+	<packaging>jar</packaging>
+	<name>machine-learning-algorithms-web</name>
+	
+	<parent>
+		<groupId>com.ayawala</groupId>
+		<artifactId>machine-learning-algorithms-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../machine-learning-algorithms-parent/pom.xml</relativePath>
+	</parent>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.4.0</version>
+				<executions>
+					<execution>
+						<id>exec-yarn-install</id>
+						<phase>initialize</phase>
+						<configuration>
+							<executable>yarn</executable>
+							<arguments>
+								<argument>install</argument>
+							</arguments>
+						</configuration>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+					</execution>
+					<!-- 				
+					<execution>
+						<id>exec-yarn-reinstall-phantomjs</id>
+						<phase>initialize</phase>
+						<configuration>
+							<executable>yarn</executable>
+							<arguments>
+								<argument>run</argument>
+								<argument>reinstall-phantomjs</argument>
+							</arguments>
+						</configuration>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+					</execution>
+ 					-->
+					<execution>
+						<id>exec-yarn-build</id>
+						<phase>compile</phase>
+						<configuration>
+							<executable>yarn</executable>
+							<arguments>
+								<argument>run</argument>
+								<argument>build:prod</argument>
+							</arguments>
+						</configuration>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
