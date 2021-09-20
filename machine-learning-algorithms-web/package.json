@@ -22,7 +22,7 @@
         "marked": "0.3.6",
         "moment": "2.18.1",
         "node-sass": "^4.5.3",
-        "prismjs": "1.6.0",
+        "prismjs": "1.25.0",
         "react": "15.5.4",
         "react-bootstrap": "0.31.0",
         "react-bootstrap-typeahead": "1.2.0",
